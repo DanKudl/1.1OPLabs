@@ -11,7 +11,7 @@ int main() {
 
     FILE* input_file;
     FILE* output_file;
-    FILE* log_file = fopen("log.log", "w");
+    FILE* log_file = fopen("log.log", "a");
     double x, y, a;
     time_t time1, time2 = 0, time3 = 0, time4 = 0, time5 = 0;
     time(&time1);
