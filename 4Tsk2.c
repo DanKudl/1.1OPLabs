@@ -7,8 +7,13 @@
 #include <stdlib.h>
 #include "functions.h"
 
-int main() {
+//#define a 1.0
+//#define b 3.0
 
+
+
+int main()
+{
     FILE* input_file;
     FILE* output_file;
     FILE* log_file = fopen("log.log", "a");
@@ -40,6 +45,19 @@ int main() {
             fprintf(input_file, "%lf %lf", x, y);
             printf("a = %lf, x(%lf) and y(%lf) writed to %s file\n", a, x, y, file_name);
             fclose(input_file);
+
+            time(&time2);
+            log_print = ctime(&time2);
+            log_print[strlen(log_print) - 1] = '\0';
+            fprintf(log_file, "[%s] Parameters writed to file\n", log_print);
+
+            time(&time3);
+            log_print = ctime(&time3);
+            log_print[strlen(log_print) - 1] = '\0';
+            fprintf(log_file, "[%s] Program ended\n\n", log_print);
+            fclose(input_file);
+            fclose(log_file);
+
             return 0;
         }
         else {
@@ -121,7 +139,9 @@ int main() {
     time(&time5);
     log_print = ctime(&time5);
     log_print[strlen(log_print) - 1] = '\0';
-    fprintf(log_file, "[%s] Program ended\n", log_print);
-
+    fprintf(log_file, "[%s] Program ended\n\n", log_print);
+    fclose(input_file);
+    fclose(log_file);
     return 0;
 }
+
