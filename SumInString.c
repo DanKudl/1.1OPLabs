@@ -1,17 +1,6 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <time.h>
-#include <string.h>
-#include <math.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include "functions.h"
-
-//#define n 3
-#define LENGTH 1024
 
 
-int main() {
+int vals() {
     char str[LENGTH];
     gets(str);
 
@@ -56,3 +45,4 @@ int main() {
 
     return 0;
 }
+
