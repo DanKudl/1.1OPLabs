@@ -5,7 +5,7 @@
 #define POW3(x) ((x) * (x) * (x))
 #define MAX2(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN2(x, y) (((x) < (y)) ? (x) : (y))
-#define MOD(x) ((x) < (0)) ? (-x) : (x)
+#define MOD(x) ((x) < (0)) ? ((-1) * (x)) : (x)
 
 #define LINE 1
 
